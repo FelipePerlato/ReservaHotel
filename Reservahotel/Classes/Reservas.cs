@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,14 +33,22 @@ namespace Reservahotel.Classes
             return (int)duracao.TotalDays;
         }
 
+        public void Atualizardata(DateTime dataentrada, DateTime datasaida )
+        {
+            Dataentrada = dataentrada;
+            Datasaida = datasaida;
+
+
+        }
+
         public override string ToString()
         {
-            return "Numquarto "
+            return " Numquarto:"
                 + Numquarto
-                 + "dataentrada "
-                  + Dataentrada.ToString("dd/MM/yyyy")
-                   + " datasaida "
-                    + Datasaida.ToString("dd/MM/yyyy")
+                 + " dataentrada:"
+                  + Dataentrada.ToString("dd/MM/yyyy ")
+                   + " datasaida:"
+                    + Datasaida.ToString("dd/MM/yyyy ")
                      + Duracao()
                       + " noites";
 
